@@ -1,0 +1,16 @@
+Celery 4.0+ does not officially support window already. 
+But it still works on window for some development/test purpose.
+Use eventlet instead as below:
+
+redis command to run on command
+redis-cli -h localhost -p 6379
+
+
+pip install eventlet
+celery -A <project_name> worker -l info -P eventlet
+celery -A testing worker -l info -P eventlet #main running command
+
+
+celery -A celery_worker.celery worker --loglevel=INFO 
+celery -A celery_worker.celery flower --port=5555
+celery -A project_name.
