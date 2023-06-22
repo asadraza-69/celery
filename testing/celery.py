@@ -22,7 +22,7 @@ app.autodiscover_tasks()
 def debug_task(self):
     print(f'Request: {self.request!r}')
 
-broker_connection_retry_on_startup = True
+# broker_connection_retry_on_startup = True
 
 # app.conf.beat_schedule = {
 #     'add-every-5-seconds': {
